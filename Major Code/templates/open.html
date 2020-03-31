@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aspect Level Analysis</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/journal/bootstrap.min.css">
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      background-color: #38ada9;
+    }
+
+    .container {
+      height: 100%;
+    }
+
+    .jumbotron {
+      margin-top: 10%;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to Mobile Analysis</h1>
+      <p class="lead">
+        Get a state of the art analysis of a mobile and feature of your selection.
+      </p>
+      <hr>
+      <form method="POST" action="http://127.0.0.1:5000/res">
+        <div class="form-group">
+          <label for="model_name">Please Select a Mobile model</label>
+            <select id="model_name" class="form-control" name='model_name'>
+              <option value="OnePlus 7T">OnePlus 7T</option>
+              <option value="Samsung Galaxy M30">Samsung Galaxy M30</option>
+              <option value="Nokia 7.1">Nokia 7.1</option>
+              <option value="realme 5 Pro">realme 5 Pro</option>
+              <option value="OnePlus 6T">OnePlus 6T</option>
+              <option value="Xiaomi Mi A3">Xiaomi Mi A3</option>
+              <option value="Vivo V17 Pro">Vivo V17 Pro</option>
+              <option value="OPPO F11">OPPO F11</option>
+              <option value="OnePlus 7 Pro">OnePlus 7 Pro</option>
+              <option value="Redmi Note 5 Pro">Redmi Note 5 pro</option>
+            </select>
+        </div>
+        <div class="form-group">
+        <label for="feature">PLease select a Feature.</label>
+        <select id="feature" name='feature' class="form-control">
+          <option value="Camera">Camera</option>
+          <option value="Battery">Battery</option>
+          <option value="RAM">RAM</option>
+          <option value="Quality">Quality</option>
+          <option value="Screen">Screen</option>
+          <option value="Memory">Memory</option>
+        </select>
+      </div>
+	  <center>
+      <button type="submit" class="btn btn-primary" name='analyze' value=1>Analyze</button>&nbsp;&nbsp;&nbsp;
+      <button type="submit" class="btn btn-primary" name='analyzeall' value=1>Analyze All Phone</button>
+	  </center>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
